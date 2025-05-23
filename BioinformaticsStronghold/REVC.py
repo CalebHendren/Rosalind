@@ -1,16 +1,6 @@
-s = "AAAACCCGGT"
+s = input("Enter a DNA sequence: ")
 
-reversed_s = s[::-1]
+complement_map = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+reverse_complement = ''.join(complement_map[nucleotide] for nucleotide in reversed(s))
 
-complement_map = {
-    'A': 'T',
-    'T': 'A',
-    'C': 'G',
-    'G': 'C'
-}
-
-reverse_complement_s = ""
-for char in reversed_s:
-    reverse_complement_s += complement_map[char]
-    
-print(reverse_complement_s)
+print(reverse_complement)
